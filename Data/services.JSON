@@ -1,0 +1,24 @@
+
+
+
+
+[
+
+    {
+     "service" : "Création de sites Web",
+     "desc"    : "Sites vitrines, e-commerce, applications modernes."
+
+    },
+
+        {
+     "service" : "Développement sur mesure",
+     "desc"    : "Outils internes, solutions métiers spécifiques."
+
+    },
+        {
+     "service" : "Automatisation & API",
+     "desc"    : "Automatisation des tâches, intégration d'API."
+
+    }
+
+]
