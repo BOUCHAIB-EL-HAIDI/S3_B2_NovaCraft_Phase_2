@@ -21,7 +21,9 @@ $routes = [
     
     '/about' => 'Controllers/about.php',
     '/contact' => 'Controllers/contact.php',
-    '/services' => 'Controllers/services.php'
+    '/services' => 'Controllers/services.php',
+    '/login' => 'Controllers/login.php',
+    '/signup' => 'Controllers/signup.php'
 ];
 
 
