@@ -6,7 +6,7 @@
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form action="/Controllers/login.php" method="POST" class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4">
+    <form action="/login" method="POST" class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4">
       <div>
         <label for="email" class="block text-sm/6 font-medium text-black">Email address</label>
         <div class="mt-2">
