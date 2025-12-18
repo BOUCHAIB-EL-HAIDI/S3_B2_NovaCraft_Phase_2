@@ -1,12 +1,18 @@
 
 <?php
 
-require __DIR__ . "/../Views/signup.view.php";
+
 require __DIR__ . "/../connection.php";
 
 if($_SERVER["REQUEST_METHOD"] === 'POST') {
 
-$error = [];
+    // getting and validating the inputs from the sign up form 
+$error = [
+    'username' => '',
+    'email' => '',
+    'password' => ''
+];
+$username = $email = $password = '';
 $username = htmlspecialchars(trim($_POST['username'] ?? ''));
 
 $email = htmlspecialchars(trim($_POST['email'] ?? ''));
@@ -33,3 +39,5 @@ $error['password'] = "please choose a password";
 }
 
 }
+
+require __DIR__ . "/../Views/signup.view.php";

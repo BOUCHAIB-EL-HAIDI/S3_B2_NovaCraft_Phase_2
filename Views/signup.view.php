@@ -23,9 +23,15 @@
             name="username"
             type="text"
             placeholder = "Enter a Username"
+             value="<?= htmlspecialchars($username) ?>"
             required
             class="border-2 order-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5 outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
+          <?php if(!empty($error['username'])): ?>
+
+          <p class = "text-red-600"><?= $error['username'] ?></p>
+          <?php endif ; ?>
+
         </div>
       </div>
 
@@ -40,9 +46,14 @@
             name="email"
             type="email"
             placeholder = "Enter Your Email"
+            value="<?= htmlspecialchars($email) ?>"
             required
             class="border-2 order-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5  outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
+              <?php if(!empty($error['email'])): ?>
+
+          <p class = "text-red-600"><?= $error['email'] ?></p>
+          <?php endif ; ?>
         </div>
       </div>
 
@@ -57,9 +68,14 @@
             name="password"
             type="password"
             placeholder = "Enter a Password"
+            value=""
             required
             class="border-2 border-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5  outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
+                 <?php if(!empty($error['password'])): ?>
+
+          <p class = "text-red-600"><?= $error['password'] ?></p>
+          <?php endif ; ?>
         </div>
       </div>
 
