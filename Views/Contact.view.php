@@ -18,7 +18,7 @@
         }, 3000);
     </script>
 <?php endif; ?>
-    <form action="/Controllers/contact.php" class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4"  method="POST">
+    <form action="/contact" class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4"  method="POST">
       <input type="text" name="name" placeholder="Votre nom" class="w-full border px-4 py-2 rounded-lg" pattern="[A-Za-z ]{2,50}" title="2-50 letters only" required>
       <input type="email" name="email" placeholder="Votre email" class="w-full border px-4 py-2 rounded-lg" pattern="[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}" 
            title="Enter a valid email address" required>
