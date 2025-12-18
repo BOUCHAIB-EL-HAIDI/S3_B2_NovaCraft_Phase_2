@@ -22,8 +22,9 @@
             id="username"
             name="username"
             type="text"
+            placeholder = "Enter a Username"
             required
-            class="border-2 border-black text-black block w-full rounded-md bg-white/5 px-3 py-1.5 outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
+            class="border-2 order-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5 outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
         </div>
       </div>
@@ -38,8 +39,9 @@
             id="email"
             name="email"
             type="email"
+            placeholder = "Enter Your Email"
             required
-            class="border-2 border-black text-black block w-full rounded-md bg-white/5 px-3 py-1.5  outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
+            class="border-2 order-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5  outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
         </div>
       </div>
@@ -54,8 +56,9 @@
             id="password"
             name="password"
             type="password"
+            placeholder = "Enter a Password"
             required
-            class="border-2 border-black text-black block w-full rounded-md bg-white/5 px-3 py-1.5  outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
+            class="border-2 border-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5  outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
         </div>
       </div>
