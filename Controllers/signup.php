@@ -38,6 +38,31 @@ $error['password'] = "please choose a password";
     $error['password'] = "Password must be at least 6 chars and include letters & numbers";
 }
 
+
+// now checking if the username or email is already in the database if so throw an error 
+//username
+$statment = $conn->prepare("SELECT id FROM users WHERE name = ?");
+$statment->bind_param("s", $username);
+$statment->execute();
+$statment->store_result();
+
+if($statment->num_rows > 0){
+    $error['username'] = "username already taken choose a diffrent one";
+}
+$statment->close();
+
+//email 
+$statment = $conn->prepare("SELECT id FROM users WHERE email = ?");
+$statment->bind_param("s", $email);
+$statment->execute();
+$statment->store_result();
+
+if($statment->num_rows > 0){
+    $error['email'] = "choose a diffrent email";
+}
+$statment->close();
+
+
 }
 
 require __DIR__ . "/../Views/signup.view.php";
