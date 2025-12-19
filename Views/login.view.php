@@ -6,18 +6,22 @@
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+
+     <?php if (!empty($loginFailedMessage)): ?>
+  <p class="text-red-600 text-center mb-4"><?= htmlspecialchars($loginFailedMessage) ?></p>
+<?php endif; ?>
     <form action="/login" method="POST" class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4">
       <div>
-        <label for="email" class="block text-sm/6 font-medium text-black">Email address</label>
+        <label for="email" class="block text-sm/6 font-medium text-black">Email Or Username</label>
         <div class="mt-2">
-          <input id="email" placeholder="Enter Your Email" type="email" name="email" required autocomplete="email" class="border-2 border-grey-300 block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+          <input id="email" value="<?= htmlspecialchars($emailOrUsername ?? '') ?>"   placeholder="Enter Your Email Or Username" type="text" name="email_or_username" required autocomplete="username" class="border-2 border-grey-300 block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
         </div>
       </div>
 
       <div>
         <div class="mt-2">
           <label for="password" class="block text-sm/6 font-medium text-black">Password</label>
-          <input id="password" placeholder="Enter Your Password" type="password" name="password" required autocomplete="current-password" class="border-2 border-grey-300 block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 " />
+          <input id="password" placeholder="Enter Your Password" type="password" name="password" required autocomplete="new-password" value= "" class="border-2 border-grey-300 block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 " />
         </div>
       </div>
 
