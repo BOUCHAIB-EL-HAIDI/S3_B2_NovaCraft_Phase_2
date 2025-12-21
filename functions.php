@@ -23,7 +23,8 @@ $routes = [
     '/contact' => 'Controllers/contact.php',
     '/services' => 'Controllers/services.php',
     '/login' => 'Controllers/login.php',
-    '/signup' => 'Controllers/signup.php'
+    '/signup' => 'Controllers/signup.php',
+    '/profile' => 'Controllers/profile.php'
 ];
 
 

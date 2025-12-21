@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require __DIR__ . "/../connection.php";
 
 $emailOrUsername = '';
@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             // Login successful
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['name'];
+            
 
             header("Location: /profile");
             exit;
@@ -33,5 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
         $loginFailedMessage = "Please fill in both fields.";
     }
 }
+
 
 require __DIR__ . "/../Views/login.view.php";
