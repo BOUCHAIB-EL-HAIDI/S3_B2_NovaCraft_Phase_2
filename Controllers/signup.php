@@ -35,7 +35,7 @@ $error['email'] = "Email should not be empty";
 }
 if(empty($password)){
 $error['password'] = "please choose a password";
-}elseif(!preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/', $password)) {
+}elseif(!preg_match('/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/', $password)) {
     $error['password'] = "Password must be at least 6 chars and include letters & numbers";
 }
 
