@@ -20,11 +20,11 @@
       
       <div class="auth flex items-center space-x-4">
         <?php if(isset($_SESSION['user_id'])): ?>
-          <!-- User is logged in -->
+          <!--if  User is logged in -->
           <a href="/profile" class="<?php if($uri === "/profile") echo "text-blue-600"?> hover:text-blue-600">Profil</a>
           <a href="/logout" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700">Logout</a>
         <?php else: ?>
-          <!-- User is not logged in -->
+          <!--if  User is not logged in -->
           <a href="/login" class="<?php if($uri === "/login") echo "text-blue-600"?> hover:text-blue-600">Login</a>
           <a href="/signup" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Sign Up</a>
         <?php endif; ?>
