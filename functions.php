@@ -24,7 +24,8 @@ $routes = [
     '/services' => 'Controllers/services.php',
     '/login' => 'Controllers/login.php',
     '/signup' => 'Controllers/signup.php',
-    '/profile' => 'Controllers/profile.php'
+    '/profile' => 'Controllers/profile.php',
+    '/logout' => 'Controllers/logout.php'
 ];
 
 
