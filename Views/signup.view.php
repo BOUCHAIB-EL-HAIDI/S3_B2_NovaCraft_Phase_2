@@ -10,7 +10,13 @@
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form action="/Controllers/signup.php" method="POST" class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4">
+  
+    <?php if(!empty($successMessage)) : ?>
+
+     <p class = "text-green-600 font-bold pb-4 flex justify-center"><?= $successMessage ?></p>
+    <?php endif; ?>
+     <p > </p>
+    <form action="/signup" method="POST" class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4">
 
       <!-- Username -->
       <div>
@@ -23,9 +29,15 @@
             name="username"
             type="text"
             placeholder = "Enter a Username"
+             value="<?= htmlspecialchars($username) ?>"
             required
             class="border-2 order-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5 outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
+          <?php if(!empty($error['username'])): ?>
+
+          <p class = "text-red-600"><?= $error['username'] ?></p>
+          <?php endif ; ?>
+
         </div>
       </div>
 
@@ -40,9 +52,14 @@
             name="email"
             type="email"
             placeholder = "Enter Your Email"
+            value="<?= htmlspecialchars($email) ?>"
             required
             class="border-2 order-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5  outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
+              <?php if(!empty($error['email'])): ?>
+
+          <p class = "text-red-600"><?= $error['email'] ?></p>
+          <?php endif ; ?>
         </div>
       </div>
 
@@ -57,9 +74,15 @@
             name="password"
             type="password"
             placeholder = "Enter a Password"
+            value=""
             required
+            autocomplete="new-password"  
             class="border-2 border-grey-300 text-black block w-full rounded-md bg-white/5 px-3 py-1.5  outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
           />
+                 <?php if(!empty($error['password'])): ?>
+
+          <p class = "text-red-600"><?= $error['password'] ?></p>
+          <?php endif ; ?>
         </div>
       </div>
 

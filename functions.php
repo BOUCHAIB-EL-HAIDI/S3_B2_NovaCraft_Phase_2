@@ -10,7 +10,7 @@ die();
 
 };
 
-$uri = $_SERVER['REQUEST_URI'];
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 
 
@@ -23,7 +23,8 @@ $routes = [
     '/contact' => 'Controllers/contact.php',
     '/services' => 'Controllers/services.php',
     '/login' => 'Controllers/login.php',
-    '/signup' => 'Controllers/signup.php'
+    '/signup' => 'Controllers/signup.php',
+    '/profile' => 'Controllers/profile.php'
 ];
 
 

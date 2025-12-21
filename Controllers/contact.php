@@ -39,7 +39,7 @@ $contact = [
      file_put_contents($filePath, json_encode($contacts, JSON_PRETTY_PRINT));
 
      // store the contacts in the contacts table in that base 
-     $statment = $conn->prepare("INSERT INTO contacts (name , email , message ) VALUE (?, ? , ?)");
+     $statment = $conn->prepare("INSERT INTO contacts (name , email , message ) VALUES (?, ? , ?)");
      $statment->bind_param("sss" , $name , $mail , $message);
      $statment->execute();
      
